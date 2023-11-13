@@ -171,6 +171,7 @@ public class NiciraRestClientTest {
 
     @Test
     public void testExecuteLiveLockWhenControllerAllowsLoginAndFollowsWithUnauthorizedButDoesNotRediect() throws Exception {
+
         when(mockResponse.getStatusLine())
             .thenReturn(HTTP_401_STATUSLINE)
             .thenReturn(HTTP_200_STATUSLINE)

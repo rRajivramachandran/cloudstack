@@ -83,7 +83,6 @@ public class NiciraRestClient extends BasicRestClient {
         counter.incrementExecutionCounter();
         s_logger.debug("Executing " + request.getMethod() + " request [execution count = " + counter.getValue() + "]");
         final CloseableHttpResponse response = super.execute(request);
-
         final StatusLine statusLine = response.getStatusLine();
         final int statusCode = statusLine.getStatusCode();
         s_logger.debug("Status of last request: " + statusLine.toString());
